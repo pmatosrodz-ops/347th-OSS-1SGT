@@ -415,14 +415,11 @@
       <p class="card-desc">Download the monthly budget spreadsheet.</p>
     </a>
 
-    <div class="card" data-category="tools" style="animation-delay:.20s">
-      <div class="card-top">
-        <span class="tag">TL—02</span>
-        <span class="badge-soon">Coming soon</span>
-      </div>
+    <a class="card" data-category="tools" href="Skillbridge_and_Terminal_Leave_Calculator.xlsm" download style="animation-delay:.20s">
+      <div class="card-top"><span class="tag">TL—02</span><span class="arrow">→</span></div>
       <h2 class="card-title">Skillbridge and Terminal Leave Calculator</h2>
-      <p class="card-desc">Estimate Skillbridge and terminal leave timelines.</p>
-    </div>
+      <p class="card-desc">Download the Skillbridge and terminal leave calculator.</p>
+    </a>
 
     <div class="card card-critical" data-category="reading" style="animation-delay:.38s">
       <div class="card-header" role="button" tabindex="0" aria-expanded="false" aria-controls="checklist-suicide">
@@ -441,11 +438,11 @@
         <p class="checklist-heading">Checklist</p>
         <p class="checklist-call">Call First Sergeant <a class="contact-tel" href="tel:12294443895">229-444-3895</a></p>
         <ul class="checklist-items">
-          <li><input type="checkbox" id="chk-01"><label for="chk-01">1. Never leave the Airman alone</label></li>
-          <li><input type="checkbox" id="chk-02"><label for="chk-02">2. Call Security Forces if immediate risk</label></li>
+          <li><input type="checkbox" id="chk-01"><label for="chk-01">1. Assess for immediate danger before approaching — if there's an active attempt or a weapon present, call 911 or Security Forces first</label></li>
+          <li><input type="checkbox" id="chk-02"><label for="chk-02">2. Never leave the Airman alone once it is safe to be with them</label></li>
           <li><input type="checkbox" id="chk-03"><label for="chk-03">3. Contact Mental Health or ER</label></li>
-          <li><input type="checkbox" id="chk-04"><label for="chk-04">4. Secure items that could be used for self-harm</label></li>
-          <li><input type="checkbox" id="chk-05"><label for="chk-05">5. Escort to Mental Health Clinic or ER</label></li>
+          <li><input type="checkbox" id="chk-04"><label for="chk-04">4. Secure items that could be used for self-harm — do not personally handle weapons; let Security Forces manage those</label></li>
+          <li><input type="checkbox" id="chk-05"><label for="chk-05">5. Escort to Mental Health Clinic or ER, maintaining a calm and supportive presence</label></li>
           <li><input type="checkbox" id="chk-06"><label for="chk-06">6. Ensure commander notification</label></li>
           <li><input type="checkbox" id="chk-07"><label for="chk-07">7. Do not place in handcuffs unless absolutely required</label></li>
           <li><input type="checkbox" id="chk-08"><label for="chk-08">8. Initiate Unit Support Plan</label></li>
@@ -454,7 +451,7 @@
           <li><input type="checkbox" id="chk-11"><label for="chk-11">11. Maintain connection with Mental Health</label></li>
           <li><input type="checkbox" id="chk-12"><label for="chk-12">12. Confirm treatment prescribed</label></li>
           <li><input type="checkbox" id="chk-13"><label for="chk-13">13. Monitor return-to-duty</label></li>
-          <li><input type="checkbox" id="chk-14"><label for="chk-14">14. Avoid stigmatizing the Airman</label></li>
+          <li><input type="checkbox" id="chk-14"><label for="chk-14">14. Avoid stigmatizing the Airman — protect their privacy and dignity throughout</label></li>
         </ul>
         <button type="button" class="reset-btn" data-target="checklist-suicide">Reset checklist</button>
       </div>
@@ -476,15 +473,17 @@
         <p class="checklist-heading">Checklist</p>
         <p class="checklist-call">Call First Sergeant <a class="contact-tel" href="tel:12294443895">229-444-3895</a></p>
         <ul class="checklist-items">
-          <li><input type="checkbox" id="sapr-01"><label for="sapr-01">1. Determine if report is Restricted or Unrestricted</label></li>
-          <li><input type="checkbox" id="sapr-02"><label for="sapr-02">2. If restricted: refer to SAPR only</label></li>
-          <li><input type="checkbox" id="sapr-03"><label for="sapr-03">3. If unrestricted: notify Commander, OSI, SAPR within 24 hours</label></li>
-          <li><input type="checkbox" id="sapr-04"><label for="sapr-04">4. Protect victim's identity and dignity</label></li>
-          <li><input type="checkbox" id="sapr-05"><label for="sapr-05">5. Do not question the victim</label></li>
-          <li><input type="checkbox" id="sapr-06"><label for="sapr-06">6. Ensure temporary separation of parties</label></li>
-          <li><input type="checkbox" id="sapr-07"><label for="sapr-07">7. Issue no-contact orders if applicable</label></li>
-          <li><input type="checkbox" id="sapr-08"><label for="sapr-08">8. Offer emergency transfer if necessary</label></li>
-          <li><input type="checkbox" id="sapr-09"><label for="sapr-09">9. Monthly tracking of SAPR case management</label></li>
+          <li><input type="checkbox" id="sapr-01"><label for="sapr-01">1. Assess for immediate safety concerns — if the assailant is nearby or there's an ongoing threat, contact Security Forces or OSI first</label></li>
+          <li><input type="checkbox" id="sapr-02"><label for="sapr-02">2. Get medical care immediately if there are any injuries</label></li>
+          <li><input type="checkbox" id="sapr-03"><label for="sapr-03">3. Ensure temporary separation of parties, keeping the victim in a safe, private location</label></li>
+          <li><input type="checkbox" id="sapr-04"><label for="sapr-04">4. Determine if report is Restricted or Unrestricted (the victim's choice)</label></li>
+          <li><input type="checkbox" id="sapr-05"><label for="sapr-05">5. If restricted: refer to SAPR only</label></li>
+          <li><input type="checkbox" id="sapr-06"><label for="sapr-06">6. If unrestricted: notify Commander, OSI, SAPR within 24 hours</label></li>
+          <li><input type="checkbox" id="sapr-07"><label for="sapr-07">7. Protect victim's identity and dignity throughout</label></li>
+          <li><input type="checkbox" id="sapr-08"><label for="sapr-08">8. Do not question the victim — let a trained SARC or investigator lead any interview</label></li>
+          <li><input type="checkbox" id="sapr-09"><label for="sapr-09">9. Issue no-contact orders if applicable</label></li>
+          <li><input type="checkbox" id="sapr-10"><label for="sapr-10">10. Offer emergency transfer if necessary</label></li>
+          <li><input type="checkbox" id="sapr-11"><label for="sapr-11">11. Monthly tracking of SAPR case management</label></li>
         </ul>
         <button type="button" class="reset-btn" data-target="checklist-sapr">Reset checklist</button>
       </div>
@@ -495,7 +494,7 @@
         <div class="card-top"><span class="tag">CHK—03</span></div>
         <h2 class="card-title">Domestic violence</h2>
         <p class="card-desc">Immediate safety steps and follow-up support.</p>
-        <p class="card-overview">Domestic violence requires mandatory reporting and a multidisciplinary response.</p>
+        <p class="card-overview">Domestic violence requires mandatory reporting and a multidisciplinary response. Physical safety — yours and everyone involved — comes before any administrative step.</p>
         <p class="checklist-toggle-hint"><span class="chevron">▾</span><span class="hint-text"></span></p>
       </div>
       <div class="checklist" id="checklist-dv">
@@ -506,14 +505,19 @@
         <p class="checklist-heading">Checklist</p>
         <p class="checklist-call">Call First Sergeant <a class="contact-tel" href="tel:12294443895">229-444-3895</a></p>
         <ul class="checklist-items">
-          <li><input type="checkbox" id="dv-01"><label for="dv-01">1. Separate parties involved immediately</label></li>
-          <li><input type="checkbox" id="dv-02"><label for="dv-02">2. Notify FAP</label></li>
-          <li><input type="checkbox" id="dv-03"><label for="dv-03">3. Remove weapons if applicable</label></li>
-          <li><input type="checkbox" id="dv-04"><label for="dv-04">4. FAP conducts clinical assessment</label></li>
-          <li><input type="checkbox" id="dv-05"><label for="dv-05">5. Contact OSI or SF if criminal elements present</label></li>
-          <li><input type="checkbox" id="dv-06"><label for="dv-06">6. Contact Chaplains, Mental Health, MFLC</label></li>
-          <li><input type="checkbox" id="dv-07"><label for="dv-07">7. Create memo for record</label></li>
-          <li><input type="checkbox" id="dv-08"><label for="dv-08">8. Commander notification within 48 hours</label></li>
+          <li><input type="checkbox" id="dv-01"><label for="dv-01">1. Assess the scene for danger before approaching — do not enter alone if there's an active threat</label></li>
+          <li><input type="checkbox" id="dv-02"><label for="dv-02">2. Separate the parties immediately, keeping a safe distance and a clear path to an exit for yourself</label></li>
+          <li><input type="checkbox" id="dv-03"><label for="dv-03">3. Contact Local PD (if off base) or Security Forces (if on base)</label></li>
+          <li><input type="checkbox" id="dv-04"><label for="dv-04">4. Confirm the immediate physical safety of all parties, including any children present</label></li>
+          <li><input type="checkbox" id="dv-05"><label for="dv-05">5. Remove weapons if applicable</label></li>
+          <li><input type="checkbox" id="dv-06"><label for="dv-06">6. Offer privacy and connect the victim with the FAP Victim Advocate or the Domestic Abuse Victim Advocate, 24/7: 912-601-1497</label></li>
+          <li><input type="checkbox" id="dv-07"><label for="dv-07">7. Discuss a safety plan — where they can go and who can support them if they choose to leave</label></li>
+          <li><input type="checkbox" id="dv-08"><label for="dv-08">8. Notify FAP</label></li>
+          <li><input type="checkbox" id="dv-09"><label for="dv-09">9. FAP conducts clinical assessment</label></li>
+          <li><input type="checkbox" id="dv-10"><label for="dv-10">10. Contact OSI or SF if criminal elements present</label></li>
+          <li><input type="checkbox" id="dv-11"><label for="dv-11">11. Contact Chaplains, Mental Health, MFLC</label></li>
+          <li><input type="checkbox" id="dv-12"><label for="dv-12">12. Create memo for record</label></li>
+          <li><input type="checkbox" id="dv-13"><label for="dv-13">13. Commander notification within 48 hours</label></li>
         </ul>
         <button type="button" class="reset-btn" data-target="checklist-dv">Reset checklist</button>
       </div>
@@ -535,15 +539,16 @@
         <p class="checklist-heading">Checklist</p>
         <p class="checklist-call">Call First Sergeant <a class="contact-tel" href="tel:12294443895">229-444-3895</a></p>
         <ul class="checklist-items">
-          <li><input type="checkbox" id="alt-01"><label for="alt-01">1. Get incident report from SF, OSI, or civilian PD</label></li>
-          <li><input type="checkbox" id="alt-02"><label for="alt-02">2. Get witness statements</label></li>
-          <li><input type="checkbox" id="alt-03"><label for="alt-03">3. Separate involved parties immediately</label></li>
+          <li><input type="checkbox" id="alt-01"><label for="alt-01">1. Assess before intervening — do not place yourself between combatants alone; call Security Forces if needed to safely break it up</label></li>
+          <li><input type="checkbox" id="alt-02"><label for="alt-02">2. Separate the involved parties immediately, maintaining a safe distance between them</label></li>
+          <li><input type="checkbox" id="alt-03"><label for="alt-03">3. Check for injuries and get medical care immediately if needed</label></li>
           <li><input type="checkbox" id="alt-04"><label for="alt-04">4. Notify supervisor and commander</label></li>
-          <li><input type="checkbox" id="alt-05"><label for="alt-05">5. Read Article 31 rights, offer ADC first</label></li>
-          <li><input type="checkbox" id="alt-06"><label for="alt-06">6. Assess if alcohol was involved</label></li>
-          <li><input type="checkbox" id="alt-07"><label for="alt-07">7. Determine if injuries occurred</label></li>
-          <li><input type="checkbox" id="alt-08"><label for="alt-08">8. Initiate commander notification within 1 duty day</label></li>
-          <li><input type="checkbox" id="alt-09"><label for="alt-09">9. Initiate paperwork within 3 duty days</label></li>
+          <li><input type="checkbox" id="alt-05"><label for="alt-05">5. Get incident report from SF, OSI, or civilian PD</label></li>
+          <li><input type="checkbox" id="alt-06"><label for="alt-06">6. Get witness statements</label></li>
+          <li><input type="checkbox" id="alt-07"><label for="alt-07">7. Read Article 31 rights, offer ADC first</label></li>
+          <li><input type="checkbox" id="alt-08"><label for="alt-08">8. Assess if alcohol was involved</label></li>
+          <li><input type="checkbox" id="alt-09"><label for="alt-09">9. Initiate commander notification within 1 duty day</label></li>
+          <li><input type="checkbox" id="alt-10"><label for="alt-10">10. Initiate paperwork within 3 duty days</label></li>
         </ul>
         <button type="button" class="reset-btn" data-target="checklist-alt">Reset checklist</button>
       </div>
@@ -562,14 +567,15 @@
         <p class="checklist-call">Call First Sergeant <a class="contact-tel" href="tel:12294443895">229-444-3895</a></p>
         <ul class="checklist-items">
           <li><input type="checkbox" id="nle-01"><label for="nle-01">1. Confirm the situation is not life-threatening — if it is, call 911 immediately</label></li>
-          <li><input type="checkbox" id="nle-02"><label for="nle-02">2. Get the Airman to the ER, urgent care, or appropriate medical care</label></li>
-          <li><input type="checkbox" id="nle-03"><label for="nle-03">3. Notify supervisor and commander of the incident</label></li>
-          <li><input type="checkbox" id="nle-04"><label for="nle-04">4. If a car accident: get the police report number and other party's insurance/contact info</label></li>
-          <li><input type="checkbox" id="nle-05"><label for="nle-05">5. If duty-related: initiate the Line of Duty (LOD) determination process</label></li>
-          <li><input type="checkbox" id="nle-06"><label for="nle-06">6. Document the date, time, location, and circumstances</label></li>
-          <li><input type="checkbox" id="nle-07"><label for="nle-07">7. Confirm follow-up appointments and any duty limitations (LIMDU/quarters)</label></li>
-          <li><input type="checkbox" id="nle-08"><label for="nle-08">8. Update the First Sergeant and commander on status and expected return to duty</label></li>
-          <li><input type="checkbox" id="nle-09"><label for="nle-09">9. File any required incident or safety report within unit timelines</label></li>
+          <li><input type="checkbox" id="nle-02"><label for="nle-02">2. If a car accident: move everyone to a safe location away from traffic before anything else</label></li>
+          <li><input type="checkbox" id="nle-03"><label for="nle-03">3. Get the Airman to the ER, urgent care, or appropriate medical care</label></li>
+          <li><input type="checkbox" id="nle-04"><label for="nle-04">4. Notify supervisor and commander of the incident</label></li>
+          <li><input type="checkbox" id="nle-05"><label for="nle-05">5. If a car accident: get the police report number and other party's insurance/contact info</label></li>
+          <li><input type="checkbox" id="nle-06"><label for="nle-06">6. If duty-related: initiate the Line of Duty (LOD) determination process</label></li>
+          <li><input type="checkbox" id="nle-07"><label for="nle-07">7. Document the date, time, location, and circumstances</label></li>
+          <li><input type="checkbox" id="nle-08"><label for="nle-08">8. Confirm follow-up appointments and any duty limitations (LIMDU/quarters)</label></li>
+          <li><input type="checkbox" id="nle-09"><label for="nle-09">9. Update the First Sergeant and commander on status and expected return to duty</label></li>
+          <li><input type="checkbox" id="nle-10"><label for="nle-10">10. File any required incident or safety report within unit timelines</label></li>
         </ul>
         <p class="card-overview">If there are any police reports, please inform the 347th OSS Security Manager.</p>
         <button type="button" class="reset-btn" data-target="checklist-nle">Reset checklist</button>
@@ -822,7 +828,7 @@
     },
     a1: {
       type: 'action',
-      text: 'Call 911 or Security Forces now. Do not leave the Airman alone. Escort to the nearest Emergency Room.'
+      text: 'Call 911 or Security Forces now. Do not approach alone if a weapon is present — wait for backup, then stay with the Airman until help arrives. Escort to the nearest Emergency Room.'
     },
     q2: {
       type: 'question',
@@ -856,7 +862,7 @@
     },
     a1: {
       type: 'action',
-      text: 'Address immediate safety first. Call Security Forces/OSI and get medical care if needed, then contact the SARC.'
+      text: 'Address immediate safety first — do not approach the assailant alone. Call Security Forces/OSI and get medical care if needed, then contact the SARC.'
     },
     q2: {
       type: 'question',
@@ -890,7 +896,7 @@
     },
     a1: {
       type: 'action',
-      text: 'Call Security Forces now. Separate the parties immediately. Get medical care if needed.'
+      text: 'Assess for danger before approaching — do not enter alone. Call Security Forces (on base) or local PD (off base) now. Separate the parties once it is safe. Get medical care if needed.'
     },
     q2: {
       type: 'question',
@@ -912,7 +918,7 @@
     },
     a4: {
       type: 'action',
-      text: 'Refer to FAP for a clinical assessment and connect the member with Chaplain or Mental Health support. Notify the commander within 48 hours.'
+      text: 'Refer to FAP for a clinical assessment. Connect the victim with the Domestic Abuse Victim Advocate (912-601-1497) or Chaplain/Mental Health support, and discuss a safety plan. Notify the commander within 48 hours.'
     }
   }, 'q1');
 
@@ -924,7 +930,7 @@
     },
     a1: {
       type: 'action',
-      text: 'Separate the parties immediately. Call Security Forces if you need help safely breaking it up.'
+      text: 'Do not place yourself between the combatants alone. Call Security Forces if needed to safely separate them, then maintain a safe distance.'
     },
     q2: {
       type: 'question',
