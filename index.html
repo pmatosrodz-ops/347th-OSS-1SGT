@@ -302,6 +302,27 @@
   @media (prefers-reduced-motion: reduce){
     *{ animation:none !important; transition:none !important; }
   }
+
+  .quick-call{
+    margin:0 0 22px; padding:14px 14px 12px; border:1px solid var(--line); border-radius:6px;
+    background:rgba(245,239,224,0.05);
+  }
+  .quick-call-label{
+    font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:0.08em;
+    text-transform:uppercase; color:var(--gold); margin:0 0 10px;
+  }
+  .quick-call-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:8px; }
+  .qc{
+    display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center;
+    min-height:54px; padding:6px 4px; border-radius:6px; text-decoration:none;
+    background:var(--paper); color:var(--ink-text);
+    font-size:12px; font-weight:700; line-height:1.2; transition:opacity .15s;
+  }
+  .qc span{ font-family:'IBM Plex Mono',monospace; font-size:9.5px; font-weight:500; color:rgba(34,32,27,0.6); margin-top:3px; }
+  .qc:hover{ opacity:0.88; }
+  .qc:focus-visible{ outline:2px solid var(--gold); outline-offset:2px; }
+  .qc-critical{ background:var(--rust); color:var(--cream); }
+  .qc-critical span{ color:var(--cream-dim); }
 </style>
 </head>
 <body>
@@ -326,6 +347,21 @@
     </a>
     <p class="qr-caption">Tap to save QR code</p>
   </header>
+
+  <section class="quick-call" aria-label="Emergency quick-call numbers">
+    <p class="quick-call-label">Emergency quick call</p>
+    <div class="quick-call-grid">
+      <a class="qc qc-critical" href="tel:911">911<span>Emergency</span></a>
+      <a class="qc" href="tel:988">988, press 1<span>Crisis line</span></a>
+      <a class="qc" href="tel:12292573108">BDOC<span>Security Forces</span></a>
+      <a class="qc" href="tel:12292579308">Command Post<span>229-257-9308</span></a>
+      <a class="qc" href="tel:12292573898">Mental Health<span>229-257-3898</span></a>
+      <a class="qc" href="tel:12292577272">SARC<span>229-257-7272</span></a>
+      <a class="qc" href="tel:12292573211">Chaplain<span>229-257-3211</span></a>
+      <a class="qc" href="tel:19126011497">DV Advocate<span>912-601-1497</span></a>
+      <a class="qc" href="tel:12294443895">1st Sergeant<span>229-444-3895</span></a>
+    </div>
+  </section>
 
   <nav class="filters" id="filters" aria-label="Filter resources by category">
     <button class="chip active" data-filter="all">All</button>
@@ -604,6 +640,7 @@
         </div>
         <p class="checklist-heading">Checklist</p>
         <p class="checklist-call">Call First Sergeant <a class="contact-tel" href="tel:12294443895">229-444-3895</a></p>
+        <p class="checklist-call">Call BDOC <a class="contact-tel" href="tel:12292573108">229-257-3108</a> · Command Post <a class="contact-tel" href="tel:12292579308">229-257-9308</a></p>
         <ul class="checklist-items">
           <li><input type="checkbox" id="dui-01"><label for="dui-01">1. Make sure everyone is safe. Call 911 for any injury, and do not let an impaired Airman drive</label></li>
           <li><input type="checkbox" id="dui-02"><label for="dui-02">2. Never leave an intoxicated Airman alone. Watch for alcohol poisoning and call 911 if they are unresponsive, breathing slowly, or vomiting repeatedly</label></li>
@@ -637,6 +674,7 @@
         </div>
         <p class="checklist-heading">Checklist</p>
         <p class="checklist-call">Call First Sergeant <a class="contact-tel" href="tel:12294443895">229-444-3895</a></p>
+        <p class="checklist-call">Call Command Post <a class="contact-tel" href="tel:12292579308">229-257-9308</a></p>
         <ul class="checklist-items">
           <li><input type="checkbox" id="dth-01"><label for="dth-01">1. Confirm the death through official channels (commander, SF or OSI, medical) before telling anyone</label></li>
           <li><input type="checkbox" id="dth-02"><label for="dth-02">2. Notify the commander and the Command Post immediately</label></li>
@@ -670,6 +708,7 @@
         </div>
         <p class="checklist-heading">Checklist</p>
         <p class="checklist-call">Call First Sergeant <a class="contact-tel" href="tel:12294443895">229-444-3895</a></p>
+        <p class="checklist-call">Call Valdosta PD <a class="contact-tel" href="tel:12292422606">229-242-2606</a> · Lowndes County Jail <a class="contact-tel" href="tel:12296712999">229-671-2999</a> · BDOC <a class="contact-tel" href="tel:12292573108">229-257-3108</a></p>
         <ul class="checklist-items">
           <li><input type="checkbox" id="leg-01"><label for="leg-01">1. Confirm the facts from the official source (arresting agency or report), not from rumor</label></li>
           <li><input type="checkbox" id="leg-02"><label for="leg-02">2. Get the agency name, location, booking number, and charges</label></li>
@@ -703,6 +742,7 @@
         </div>
         <p class="checklist-heading">Checklist</p>
         <p class="checklist-call">Call First Sergeant <a class="contact-tel" href="tel:12294443895">229-444-3895</a></p>
+        <p class="checklist-call">Call BDOC <a class="contact-tel" href="tel:12292573108">229-257-3108</a> · Command Post <a class="contact-tel" href="tel:12292579308">229-257-9308</a></p>
         <ul class="checklist-items">
           <li><input type="checkbox" id="ua-01"><label for="ua-01">1. Confirm with the supervisor that the Airman missed a report time</label></li>
           <li><input type="checkbox" id="ua-02"><label for="ua-02">2. Call and text the Airman and leave a message</label></li>
@@ -736,6 +776,7 @@
         </div>
         <p class="checklist-heading">Checklist</p>
         <p class="checklist-call">Call First Sergeant <a class="contact-tel" href="tel:12294443895">229-444-3895</a></p>
+        <p class="checklist-call">Call BDOC <a class="contact-tel" href="tel:12292573108">229-257-3108</a></p>
         <ul class="checklist-items">
           <li><input type="checkbox" id="cab-01"><label for="cab-01">1. Make sure the child is safe right now. Call 911 or Security Forces if the child is in danger</label></li>
           <li><input type="checkbox" id="cab-02"><label for="cab-02">2. Get medical attention for any injury</label></li>
@@ -769,6 +810,7 @@
         </div>
         <p class="checklist-heading">Checklist</p>
         <p class="checklist-call">Call First Sergeant <a class="contact-tel" href="tel:12294443895">229-444-3895</a></p>
+        <p class="checklist-call">Call Command Post <a class="contact-tel" href="tel:12292579308">229-257-9308</a></p>
         <ul class="checklist-items">
           <li><input type="checkbox" id="fam-01"><label for="fam-01">1. Verify the emergency through the family or the American Red Cross</label></li>
           <li><input type="checkbox" id="fam-02"><label for="fam-02">2. Notify the commander</label></li>
@@ -801,6 +843,7 @@
         </div>
         <p class="checklist-heading">Checklist</p>
         <p class="checklist-call">Call First Sergeant <a class="contact-tel" href="tel:12294443895">229-444-3895</a></p>
+        <p class="checklist-call">Call BDOC <a class="contact-tel" href="tel:12292573108">229-257-3108</a></p>
         <ul class="checklist-items">
           <li><input type="checkbox" id="drg-01"><label for="drg-01">1. Check for immediate medical danger. Call 911 if you suspect an overdose</label></li>
           <li><input type="checkbox" id="drg-02"><label for="drg-02">2. Notify the commander immediately</label></li>
@@ -865,6 +908,7 @@
         </div>
         <p class="checklist-heading">Checklist</p>
         <p class="checklist-call">Call First Sergeant <a class="contact-tel" href="tel:12294443895">229-444-3895</a></p>
+        <p class="checklist-call">Call SARC <a class="contact-tel" href="tel:12292577272">229-257-7272</a></p>
         <ul class="checklist-items">
           <li><input type="checkbox" id="haz-01"><label for="haz-01">1. Make sure everyone is physically safe</label></li>
           <li><input type="checkbox" id="haz-02"><label for="haz-02">2. Listen without judging and do not promise to keep it secret</label></li>
@@ -897,6 +941,7 @@
         </div>
         <p class="checklist-heading">Checklist</p>
         <p class="checklist-call">Call First Sergeant <a class="contact-tel" href="tel:12294443895">229-444-3895</a></p>
+        <p class="checklist-call">Call Command Post <a class="contact-tel" href="tel:12292579308">229-257-9308</a></p>
         <ul class="checklist-items">
           <li><input type="checkbox" id="dis-01"><label for="dis-01">1. Follow the installation's shelter-in-place or evacuation instructions</label></li>
           <li><input type="checkbox" id="dis-02"><label for="dis-02">2. Confirm your own family is safe</label></li>
@@ -915,11 +960,138 @@
       </div>
     </div>
 
+    <div class="card" data-category="reading" style="animation-delay:1.22s">
+      <div class="card-header" role="button" tabindex="0" aria-expanded="false" aria-controls="checklist-inj">
+        <div class="card-top"><span class="tag">CHK—16</span></div>
+        <h2 class="card-title">Life-threatening injury or serious hospitalization</h2>
+        <p class="card-desc">Emergency response, hospital support, and family care.</p>
+        <p class="card-overview">Call 911 first for any life-threatening emergency. Then notify the commander, stay with the Airman or assign a hospital liaison, and let official channels handle next-of-kin notification.</p>
+        <p class="checklist-toggle-hint"><span class="chevron">▾</span><span class="hint-text"></span></p>
+      </div>
+      <div class="checklist" id="checklist-inj">
+        <div class="decision-tree" id="tree-inj">
+          <p class="tree-label">Decision tree — work through this first</p>
+          <div class="tree-content"></div>
+        </div>
+        <p class="checklist-heading">Checklist</p>
+        <p class="checklist-call">Call First Sergeant <a class="contact-tel" href="tel:12294443895">229-444-3895</a></p>
+        <p class="checklist-call">Call Command Post <a class="contact-tel" href="tel:12292579308">229-257-9308</a> · SGMC ER <a class="contact-tel" href="tel:12293331000">229-333-1000</a></p>
+        <ul class="checklist-items">
+          <li><input type="checkbox" id="inj-01"><label for="inj-01">1. Call 911 first for unresponsiveness, trouble breathing, heavy bleeding, chest pain, stroke signs, or serious head or neck injury</label></li>
+          <li><input type="checkbox" id="inj-02"><label for="inj-02">2. Give first aid, CPR, or use an AED only if you are trained, and send someone to meet the ambulance</label></li>
+          <li><input type="checkbox" id="inj-03"><label for="inj-03">3. Do not move an injured Airman unless there is immediate danger</label></li>
+          <li><input type="checkbox" id="inj-04"><label for="inj-04">4. Notify the commander and the Command Post</label></li>
+          <li><input type="checkbox" id="inj-05"><label for="inj-05">5. Find out which hospital and the Airman's condition. Share details only with those who need to know</label></li>
+          <li><input type="checkbox" id="inj-06"><label for="inj-06">6. Assign a trusted person to stay with the Airman or act as hospital liaison</label></li>
+          <li><input type="checkbox" id="inj-07"><label for="inj-07">7. Let the commander and official channels handle next-of-kin notification. Do not post anything online</label></li>
+          <li><input type="checkbox" id="inj-08"><label for="inj-08">8. Bring the Airman's ID and insurance information (TRICARE) to the hospital if requested</label></li>
+          <li><input type="checkbox" id="inj-09"><label for="inj-09">9. Support the family through M&amp;FRC (229-257-3333) and the Chaplain (229-257-3211)</label></li>
+          <li><input type="checkbox" id="inj-10"><label for="inj-10">10. Take care of the Airman's dependents, pets, vehicle, and dorm room</label></li>
+          <li><input type="checkbox" id="inj-11"><label for="inj-11">11. Update the unit using only the commander-approved message</label></li>
+          <li><input type="checkbox" id="inj-12"><label for="inj-12">12. Check in daily and coordinate return to duty with the medical provider and commander</label></li>
+        </ul>
+        <button type="button" class="reset-btn" data-target="checklist-inj">Reset checklist</button>
+      </div>
+    </div>
+
+    <div class="card" data-category="reading" style="animation-delay:1.28s">
+      <div class="card-header" role="button" tabindex="0" aria-expanded="false" aria-controls="checklist-mis">
+        <div class="card-top"><span class="tag">CHK—17</span></div>
+        <h2 class="card-title">Workplace mishap or accident</h2>
+        <p class="card-desc">Scene safety, injuries, reporting, and follow-up after a mishap.</p>
+        <p class="card-overview">Protect people first. Get everyone to a safe distance, care for the injured, and report through the chain of command. Do not re-enter the area until responders say it is safe.</p>
+        <p class="checklist-toggle-hint"><span class="chevron">▾</span><span class="hint-text"></span></p>
+      </div>
+      <div class="checklist" id="checklist-mis">
+        <div class="decision-tree" id="tree-mis">
+          <p class="tree-label">Decision tree — work through this first</p>
+          <div class="tree-content"></div>
+        </div>
+        <p class="checklist-heading">Checklist</p>
+        <p class="checklist-call">Call First Sergeant <a class="contact-tel" href="tel:12294443895">229-444-3895</a></p>
+        <p class="checklist-call">Call BDOC <a class="contact-tel" href="tel:12292573108">229-257-3108</a> · Command Post <a class="contact-tel" href="tel:12292579308">229-257-9308</a></p>
+        <ul class="checklist-items">
+          <li><input type="checkbox" id="mis-01"><label for="mis-01">1. Stop work and move everyone to a safe distance</label></li>
+          <li><input type="checkbox" id="mis-02"><label for="mis-02">2. Call 911 or BDOC for any fire, injury, explosive, or chemical hazard</label></li>
+          <li><input type="checkbox" id="mis-03"><label for="mis-03">3. Account for every person who was in the area</label></li>
+          <li><input type="checkbox" id="mis-04"><label for="mis-04">4. Give first aid only if you are trained and it is safe to do so</label></li>
+          <li><input type="checkbox" id="mis-05"><label for="mis-05">5. Do not re-enter the area until responders say it is clear</label></li>
+          <li><input type="checkbox" id="mis-06"><label for="mis-06">6. Notify the supervisor and commander right away</label></li>
+          <li><input type="checkbox" id="mis-07"><label for="mis-07">7. Notify Safety and follow the mishap reporting requirements</label></li>
+          <li><input type="checkbox" id="mis-08"><label for="mis-08">8. Do not move, clean up, or restart equipment until it is released</label></li>
+          <li><input type="checkbox" id="mis-09"><label for="mis-09">9. Send everyone involved for a medical evaluation, even if they feel fine</label></li>
+          <li><input type="checkbox" id="mis-10"><label for="mis-10">10. Write down what happened, who was present, and the times while it is fresh</label></li>
+          <li><input type="checkbox" id="mis-11"><label for="mis-11">11. Do not speculate about the cause or post online</label></li>
+          <li><input type="checkbox" id="mis-12"><label for="mis-12">12. Offer Chaplain and MFLC support and follow up with the team</label></li>
+        </ul>
+        <button type="button" class="reset-btn" data-target="checklist-mis">Reset checklist</button>
+      </div>
+    </div>
+
+    <div class="card" data-category="reading" style="animation-delay:1.34s">
+      <div class="card-header" role="button" tabindex="0" aria-expanded="false" aria-controls="checklist-vio">
+        <div class="card-top"><span class="tag">CHK—18</span></div>
+        <h2 class="card-title">Workplace violence or threat</h2>
+        <p class="card-desc">Immediate safety and response to a threat of violence.</p>
+        <p class="card-overview">Take every threat seriously, even if it sounds like a joke. Get to safety, call BDOC or 911, and do not confront the person alone.</p>
+        <p class="checklist-toggle-hint"><span class="chevron">▾</span><span class="hint-text"></span></p>
+      </div>
+      <div class="checklist" id="checklist-vio">
+        <div class="decision-tree" id="tree-vio">
+          <p class="tree-label">Decision tree — work through this first</p>
+          <div class="tree-content"></div>
+        </div>
+        <p class="checklist-heading">Checklist</p>
+        <p class="checklist-call">Call First Sergeant <a class="contact-tel" href="tel:12294443895">229-444-3895</a></p>
+        <p class="checklist-call">Call BDOC <a class="contact-tel" href="tel:12292573108">229-257-3108</a> · Command Post <a class="contact-tel" href="tel:12292579308">229-257-9308</a></p>
+        <ul class="checklist-items">
+          <li><input type="checkbox" id="vio-01"><label for="vio-01">1. Get to safety and protect others. Do not try to be a hero</label></li>
+          <li><input type="checkbox" id="vio-02"><label for="vio-02">2. Call 911 or BDOC for any weapon, assault, or immediate danger</label></li>
+          <li><input type="checkbox" id="vio-03"><label for="vio-03">3. Do not confront or argue with the person. Stay calm and keep your distance</label></li>
+          <li><input type="checkbox" id="vio-04"><label for="vio-04">4. Take every threat seriously, even if it sounds like a joke</label></li>
+          <li><input type="checkbox" id="vio-05"><label for="vio-05">5. Notify the commander right away</label></li>
+          <li><input type="checkbox" id="vio-06"><label for="vio-06">6. Write down the exact words, who heard them, the date, and the time</label></li>
+          <li><input type="checkbox" id="vio-07"><label for="vio-07">7. Keep the person who was threatened safe and do not leave them alone</label></li>
+          <li><input type="checkbox" id="vio-08"><label for="vio-08">8. Ask about thoughts of self-harm and use the suicide ideation checklist if needed</label></li>
+          <li><input type="checkbox" id="vio-09"><label for="vio-09">9. Coordinate with Mental Health and Security Forces through the commander</label></li>
+          <li><input type="checkbox" id="vio-10"><label for="vio-10">10. Offer Chaplain and MFLC support to witnesses and those affected</label></li>
+          <li><input type="checkbox" id="vio-11"><label for="vio-11">11. Do not share details beyond those who need to know</label></li>
+          <li><input type="checkbox" id="vio-12"><label for="vio-12">12. Follow up with those involved and with the commander</label></li>
+        </ul>
+        <button type="button" class="reset-btn" data-target="checklist-vio">Reset checklist</button>
+      </div>
+    </div>
+
     <div class="card" data-category="contact" style="animation-delay:.38s">
       <div class="card-top"><span class="tag">CT—01</span></div>
       <h2 class="card-title">Emergency & support contacts</h2>
       <p class="card-desc">Tap a number to call directly from your phone.</p>
       <div class="contact-list">
+        <div class="contact-row">
+          <p class="contact-label">Command Post <span class="contact-note">(24/7)</span></p>
+          <div class="contact-numbers">
+            <a class="contact-tel" href="tel:12292579308">229-257-9308</a>
+            <a class="contact-tel" href="tel:12292579859">229-257-9859</a>
+          </div>
+        </div>
+        <div class="contact-row">
+          <p class="contact-label">BDOC (Security Forces) <span class="contact-note">(24/7)</span></p>
+          <div class="contact-numbers">
+            <a class="contact-tel" href="tel:12292573108">229-257-3108</a>
+          </div>
+        </div>
+        <div class="contact-row">
+          <p class="contact-label">Valdosta Police Department <span class="contact-note">(non-emergency)</span></p>
+          <div class="contact-numbers">
+            <a class="contact-tel" href="tel:12292422606">229-242-2606</a>
+          </div>
+        </div>
+        <div class="contact-row">
+          <p class="contact-label">Lowndes County Jail</p>
+          <div class="contact-numbers">
+            <a class="contact-tel" href="tel:12296712999">229-671-2999</a>
+          </div>
+        </div>
         <div class="contact-row">
           <p class="contact-label">Mental Health Clinic <span class="contact-note">(after hours: Command Post x3501)</span></p>
           <div class="contact-numbers"><a class="contact-tel" href="tel:12292573898">229-257-3898</a></div>
@@ -929,15 +1101,19 @@
           <div class="contact-numbers"><a class="contact-tel" href="tel:12293331000">229-333-1000</a></div>
         </div>
         <div class="contact-row">
-          <p class="contact-label">Greenleaf Hospital <span class="contact-note">(24/7)</span></p>
+          <p class="contact-label">Greenleaf Hospital</p>
           <div class="contact-numbers">
-            <span class="contact-plain">29-671-6700</span>
-            <span class="contact-plain">800-2547-2747</span>
+            <a class="contact-tel" href="tel:18002472747">800-247-2747</a>
+            <span class="contact-plain">24-hour support</span>
+          </div>
+          <div class="contact-numbers">
+            <a class="contact-tel" href="tel:12295067977">229-506-7977</a>
+            <span class="contact-plain">regular line</span>
           </div>
         </div>
         <div class="contact-row">
-          <p class="contact-label">Crisis Hotline <span class="contact-note">(24/7)</span></p>
-          <div class="contact-numbers"><a class="contact-tel" href="tel:18002738255">1-800-273-8255</a></div>
+          <p class="contact-label">Military &amp; Veterans Crisis Line <span class="contact-note">(24/7)</span></p>
+          <div class="contact-numbers"><a class="contact-tel" href="tel:988">Dial 988, press 1</a></div>
         </div>
         <div class="contact-row">
           <p class="contact-label">Chaplain <span class="contact-note">(after hours: Command Post x3501)</span></p>
@@ -963,7 +1139,7 @@
           <div class="contact-numbers"><a class="contact-tel" href="tel:19126011497">912-601-1497</a></div>
         </div>
         <div class="contact-row">
-          <p class="contact-label">Sexual Assault Victim Advocate <span class="contact-note">(24/7)</span></p>
+          <p class="contact-label">23 WG SARC / Sexual Assault Victim Advocate <span class="contact-note">(24/7)</span></p>
           <div class="contact-numbers">
             <a class="contact-tel" href="tel:12292577272">229-257-7272</a>
             <span class="contact-plain">560-5085</span>
@@ -1662,6 +1838,108 @@
     a4: {
       type: 'action',
       text: "Keep the recall roster current, make sure every Airman has a family plan, and have them update their contact information."
+    }
+  }, 'q1');
+
+  initDecisionTree('tree-inj', {
+    q1: {
+      type: 'question',
+      text: "Is the Airman unresponsive, not breathing, bleeding heavily, or showing signs of a heart attack, stroke, or serious head or neck injury?",
+      yes: 'a1', no: 'q2'
+    },
+    a1: {
+      type: 'action',
+      text: "Call 911 right now. Start first aid, CPR, or an AED only if you are trained, and do not move the Airman unless there is immediate danger. Send someone to meet the ambulance. Then notify the commander and the Command Post."
+    },
+    q2: {
+      type: 'question',
+      text: "Has the Airman already been taken to a hospital or admitted?",
+      yes: 'q3', no: 'a2'
+    },
+    a2: {
+      type: 'action',
+      text: "Notify the commander and get the Airman evaluated. If you are unsure how serious it is, call 911 or the ER. Assign someone to stay with the Airman."
+    },
+    q3: {
+      type: 'question',
+      text: "Does the Airman have a spouse, children, or dependents who need support?",
+      yes: 'a3', no: 'a4'
+    },
+    a3: {
+      type: 'action',
+      text: "Notify the commander, who will work with official channels on contacting next of kin. Coordinate M&FRC (229-257-3333) and the Chaplain for childcare, transportation, and meals. Give the family one point of contact."
+    },
+    a4: {
+      type: 'action',
+      text: "Assign a hospital liaison so the Airman is not alone. Get the hospital name and the Airman's condition, update the commander, and check in daily. Share details only with those who need to know."
+    }
+  }, 'q1');
+
+  initDecisionTree('tree-mis', {
+    q1: {
+      type: 'question',
+      text: "Is there a fire, explosive, chemical, or other hazard, or is anyone injured?",
+      yes: 'a1', no: 'q2'
+    },
+    a1: {
+      type: 'action',
+      text: "Move everyone to a safe distance and call 911 or BDOC. Care for the injured only if you can do it safely. Do not re-enter until responders clear the area. Account for every person on the team."
+    },
+    q2: {
+      type: 'question',
+      text: "Was there equipment damage, a near miss, or a procedural violation, even though no one appears hurt?",
+      yes: 'a2', no: 'q3'
+    },
+    a2: {
+      type: 'action',
+      text: "Stop work and secure the area per local procedures. Notify the supervisor, commander, and Safety. Do not clean up, move, or restart anything until you are told it is clear."
+    },
+    q3: {
+      type: 'question',
+      text: "Does anyone involved seem shaken, report symptoms, or say they feel fine but were near the event?",
+      yes: 'a3', no: 'a4'
+    },
+    a3: {
+      type: 'action',
+      text: "Send everyone involved for a medical evaluation, even if they say they feel fine. Check on their emotional wellbeing and offer Chaplain and MFLC support."
+    },
+    a4: {
+      type: 'action',
+      text: "Document what happened, notify the commander and Safety, and follow the reporting steps. Debrief the team and follow up."
+    }
+  }, 'q1');
+
+  initDecisionTree('tree-vio', {
+    q1: {
+      type: 'question',
+      text: "Is there a weapon, an assault in progress, or someone in immediate danger?",
+      yes: 'a1', no: 'q2'
+    },
+    a1: {
+      type: 'action',
+      text: "Get away if you can, protect others, and call 911 or BDOC right away. Do not confront the person. Give responders the location, a description, and any weapon information."
+    },
+    q2: {
+      type: 'question',
+      text: "Has someone threatened to harm another person, in person, in writing, or on social media?",
+      yes: 'a2', no: 'q3'
+    },
+    a2: {
+      type: 'action',
+      text: "Report it to BDOC and the commander immediately, even if it seemed like a joke. Do not confront the person alone. Keep the people threatened safe and write down the exact words, who heard them, and when."
+    },
+    q3: {
+      type: 'question',
+      text: "Is the person also talking about harming themselves or showing signs of crisis?",
+      yes: 'a3', no: 'a4'
+    },
+    a3: {
+      type: 'action',
+      text: "Do not leave the person alone. Call BDOC or 911 if anyone is in danger and use the suicide ideation checklist. Notify the commander and contact Mental Health."
+    },
+    a4: {
+      type: 'action',
+      text: "Notify the supervisor and commander about the concerning behavior, write down what you saw, and refer to Mental Health through the commander. Follow up."
     }
   }, 'q1');
 </script>
